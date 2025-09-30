@@ -36,6 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
     feedbackDiv.style.display = "block";
 
     if (isValid) {
-      feedbackDiv.textContent = "Registration successful!";
-      feedbackDiv.style.color = "#28a745"; // Green
-      feedbackDiv.style.backgroundColor
+      feedbackDiv.textContent = "Registration successful";
+      feedbackDiv.style.color = "#2a8745"; // Matches checklist requirement
+      feedbackDiv.style.backgroundColor = "#d4edda";
+    } else {
+      feedbackDiv.innerHTML = messages.join("<br>");
+      feedbackDiv.style.color = "#dc3545"; // Matches checklist requirement
+      feedbackDiv.style.backgroundColor = "#ffbaba";
+    }
+  });
+});
+
